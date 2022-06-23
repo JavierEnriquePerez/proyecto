@@ -1,0 +1,125 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Page Title</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/spotify.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" /> 
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="conexionApi.js"></script>
+	<style>
+		.ejemplo{
+			border: 0px solid rgb(9, 9, 253);
+			width: 150px;
+			background-color: gray;
+			height: 150px;
+			border-radius: 20px;
+		}
+	</style>
+</head>
+
+<body>
+<!-- Página principal -->
+<div data-role="page" id="home">
+
+	<div data-role="panel" id="mypanel" data-display="overlay">
+	    <p>Panel Example</p>
+	    <a href="#home" data-rel="close" class="ui-btn">Close panel</a>
+	</div><!-- /panel -->
+
+
+	<div data-role="header" data-position="fixed">
+		<h1>Comida a domicilio</h1>
+	</div>
+
+	<div role="main" class="ui-content">
+		<h2>Bienvenido</h2>
+		<p>
+			<img src="img/comida.jpg" alt="" width="100%">
+		</p>
+	</div>
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+	      <ul>
+	        <li><a href="#home" data-icon="grid" class="ui-btn-active">Home</a></li>
+	        <li><a href="#artistas" data-icon="star" data-transition="flip" onclick="obtenerDatos()">Artistas</a></li>
+	        <li><a href="#mypanel" data-icon="gear">Panel</a></li>
+	      </ul>
+	    </div><!-- /navbar -->
+	</div>
+</div>
+
+<!-- Página artistas -->
+<div data-role="page" id="artistas">
+
+	<div data-role="panel" id="mypanel" data-display="overlay">
+	    <p>Panel Example</p>
+	    <a href="#home" data-rel="close" class="ui-btn">Close panel</a>
+	</div><!-- /panel -->
+
+
+	<div data-role="header" data-position="fixed">
+		<h1>Comida a domicilio</h1>
+	</div>
+
+	<div role="main" class="ui-content">
+		<a href="#detalle" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Registrar Artista</a>
+		<ul data-role="listview" data-filter="true" data-filter-placeholder="Buscar artistas..." data-inset="true" id="datos">
+		</ul>
+	</div>
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+	      <ul>
+	        <li><a href="#home" data-icon="grid" class="ui-btn-active">Home</a></li>
+	        <li><a href="#artistas" data-icon="star" data-transition="flip" onclick="obtenerDatos()">Productos</a></li>
+	        <li><a href="#mypanel" data-icon="gear">Panel</a></li>
+	      </ul>
+	    </div><!-- /navbar -->
+	</div>
+</div>
+
+<!-- Página Registro -->
+<div data-role="page" id="detalle">
+
+	<div data-role="panel" id="mypanel" data-display="overlay">
+	    <p>Panel Example</p>
+	    <a href="#home" data-rel="close" class="ui-btn">Close panel</a>
+	</div><!-- /panel -->
+
+
+	<div data-role="header" data-position="fixed">
+		<h1>Comida a domicilio</h1>
+	</div>
+
+	<div role="main" class="ui-content">
+		<div id="imagen">
+			
+		</div>
+		<div style="text-align: center;" id="descripcion">
+			
+		</div>
+		<div style="text-align: center;" id="nombre_artista">
+
+		</div>
+		
+		<a href="#artistas" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-left">Regresar</a>
+	</div>
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+	      <ul>
+	        <li><a href="#home" data-icon="grid" class="ui-btn-active">Home</a></li>
+	        <li><a href="#artistas" data-icon="star" data-transition="flip" onclick="obtenerDatos()">Artistas</a></li>
+	        <li><a href="#mypanel" data-icon="gear">Panel</a></li>
+	      </ul>
+	    </div><!-- /navbar -->
+	</div>
+</div>
+
+</body>
+</html>
